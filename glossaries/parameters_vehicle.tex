@@ -1,0 +1,345 @@
+\newglossaryentry{parameter}
+{type=symbols,
+  name= {Vehicle parameter},
+  description={}
+}
+
+\newglossaryentry{rocketParameters}
+{type=symbols,
+  name= {Rocket parameters},
+  description={}
+}
+
+
+\newglossaryentry{wingSpan}
+{type=symbols,
+  name= \ensuremath{b},
+  parent = {parameter},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{b},
+  description={wing span}
+}
+
+\newglossaryentry{wingRootChord}
+{type=symbols,
+  name= \ensuremath{c_{r}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{c_{r}},
+  description={wing root chord}
+}
+
+\newglossaryentry{wingMeanAerodynamicChord}
+{type=symbols,
+name= \ensuremath{\overline{c}},
+parent = {parameter},
+unit = \unexpanded{\si{\meter}},
+symbol = \ensuremath{\overline{c}},
+description={mean aerodynamic chord $\frac{2\glsentrysymbol{wingRootChord}(3\omega^2 - 3\omega(1-n) + (1-n)^2) }{3\omega^2(1+\lambda)}$}
+  }
+
+\newglossaryentry{wingTipChord}
+{type=symbols,
+  name= \ensuremath{c_{t}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{c_{t}},
+  description={wing tip chord}
+}
+
+\newglossaryentry{referenceArea}
+{type=symbols,
+  name= \ensuremath{\bar{S}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\meter\squared}},
+  symbol = \ensuremath{\bar{S}},
+  description={reference area}
+}
+
+\newglossaryentry{aspectRation}
+{type=symbols,
+  name= \ensuremath{A},
+  parent = {parameter},
+  unit = \unexpanded{},
+  symbol = \ensuremath{A },
+  description={aspect ratio $\nicefrac{\glsentrysymbol{wingSpan}^2}{\glsentrysymbol{referenceArea}}$}
+}
+
+\newglossaryentry{angleBetweenLeadingEdgeAndAxisSymmetry}
+{type=symbols,
+  name= \ensuremath{\epsilon},
+  parent = {parameter},
+  unit = \unexpanded{\si{\radian}},
+  symbol = \ensuremath{\epsilon},
+  description={angle between leading edge and axis of symmetry}
+}
+
+
+\newglossaryentry{angleBetweenTrailingEdgeAndAxisSymmetry}
+{type=symbols,
+  name= \ensuremath{\delta},
+  parent = {parameter},
+  unit = \unexpanded{\si{\radian}},
+  symbol = \ensuremath{\delta},
+  description={angle between trailing edge and axis of symmetry}
+}
+
+\newglossaryentry{angleLeadingEdgeSweep}
+{type=symbols,
+  name= \ensuremath{\Lambda},
+  parent = {parameter},
+  unit = \unexpanded{\si{\radian}},
+  symbol = \ensuremath{\Lambda},
+  description={leading edge sweep angle}
+}
+
+
+\newglossaryentry{taperRatio}
+{type=symbols,
+  name= \ensuremath{\lambda},
+  parent = {parameter},
+  unit = \unexpanded{},
+  symbol = \ensuremath{\lambda},
+  description={taper ration $\nicefrac{\glsentrysymbol{wingTipChord}}{\glsentrysymbol{wingRootChord}}$}
+}
+
+\newglossaryentry{referenceLongitudinalLength}
+{type=symbols,
+  name= \ensuremath{\bar{c}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\bar{c}},
+  description={reference longitudinal length}
+}
+
+\newglossaryentry{referenceLateralLength}
+{type=symbols,
+  name= \ensuremath{\bar{b}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\bar{b}},
+  description={reference lateral length}
+}
+
+
+\newglossaryentry{mass}
+{type=symbols,
+  name= \ensuremath{m},
+  parent = {parameter},
+  unit = \unexpanded{\si{\kilogram}},
+  symbol = \ensuremath{m},
+  description={total mass o the vehicle}
+}
+
+\newglossaryentry{massMomentOfInertiax}
+{type=symbols,
+  name= \ensuremath{I_{x}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{I_{x}},
+  description={moment of inertia around \glsentrysymbol{bodyAxisx}}
+}
+
+
+\newglossaryentry{massMomentOfInertiy}
+{type=symbols,
+  name= \ensuremath{I_{y}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{I_{y}},
+  description={moment of inertia around \glsentrysymbol{bodyAxisy}}
+}
+
+\newglossaryentry{massMomentOfInertiaz}
+{type=symbols,
+  name=\ensuremath{I_{z}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{I_{z}},
+  description={moment of inertia around \glsentrysymbol{bodyAxisz}}
+}
+
+
+\newglossaryentry{tensorOfInertiaMatrix}
+{type=symbols,
+  name=\ensuremath{\mathbf{I}},
+  parent = {parameter},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{\glsentryname{tensorOfInertiaMatrix}},
+  description={inertia tensor matrix}
+}
+
+\newglossaryentry{propellantMass}
+{type=symbols,
+  name= \ensuremath{m_\mathrm{p}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram}},
+  symbol = \ensuremath{m_\mathrm{p}},
+  description={propellant mass}
+}
+\newglossaryentry{stageMass}
+{type=symbols,
+  name= \ensuremath{m_\mathrm{s}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram}},
+  symbol = \ensuremath{m_\mathrm{s}},
+  description={stage mass}
+}
+\newglossaryentry{structuralMass}
+{type=symbols,
+  name= \ensuremath{{m}_\mathrm{d}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram}},
+  symbol = \ensuremath{{m}_\mathrm{d}},
+  description={dry mass}
+}
+
+\newglossaryentry{cgDry}
+{type=symbols,
+  name= \ensuremath{\mathbf{c}_\mathrm{g}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{c}_\mathrm{g}},
+  description={\glsentryname{cg} of the dry mass}
+}
+
+\newglossaryentry{cgPropellant}
+{type=symbols,
+  name= \ensuremath{\mathbf{c}_\mathrm{p}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{c}_\mathrm{p}},
+  description={\glsentryname{cg} of the propellant mass}
+}
+
+\newglossaryentry{stageCg}
+{type=symbols,
+  name= \ensuremath{\mathbf{c}_\mathrm{s}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{c}_\mathrm{s}},
+  description={\glsentryname{cg} of the stage mass}
+}
+\newglossaryentry{structuralCG}
+{type=symbols,
+  name= \ensuremath{\mathbf{c}_\mathrm{d}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{c}_\mathrm{d}},
+  description={\glsentryname{cg} of the dry mass}
+}
+\newglossaryentry{propellantCg}
+{type=symbols,
+  name= \ensuremath{\mathbf{c}_\mathrm{p}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{c}_\mathrm{p}},
+  description={\glsentryname{cg} of the propellant mass}
+}
+
+\newglossaryentry{totalCgBody}
+{type=symbols,
+  name= \ensuremath{{\mathbf{c}}_{b}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{{\mathbf{c}}_{b}},
+  description={\glsentryname{cg} of the total mass of the vehicle}
+}
+
+\newglossaryentry{stagePosition}
+{type=symbols,
+  name= \ensuremath{\mathbf{r}_\mathrm{s}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{r}_\mathrm{s}},
+  description={position of the stage}
+}
+%% tensor of inertia
+
+\newglossaryentry{stageInertia}
+{type=symbols,
+  name= \ensuremath{\mathbf{I}_\mathrm{s}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{\mathbf{I}_\mathrm{s}},
+  description={inertia of the stage with respect to its \glsentryname{cg}}
+}
+
+\newglossaryentry{inertiaStructural}
+  {type=symbols,
+  name= \ensuremath{\mathbf{I}_\mathrm{d}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{\mathbf{I}_\mathrm{d}},
+  description={inertia of the dry mass with respect to its \glsentryname{cg}}
+}
+\newglossaryentry{inertiaPropellant}{
+  type=symbols,
+  name= \ensuremath{\mathbf{I}_\mathrm{p}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{\mathbf{I}_\mathrm{p}},
+  description={inertia of the propellant mass with respect to its \glsentryname{cg}}
+} 
+
+\newglossaryentry{displacementVectorStructural}
+{type=symbols,
+  name= \ensuremath{\mathbf{d}_\mathrm{d}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{d}_\mathrm{d}},
+  description={displacement vector of the dry mass with respect to the \glsentryname{cg} of the total mass of the vehicle}
+}
+\newglossaryentry{displacementVectorProp}
+{type=symbols,
+  name= \ensuremath{\mathbf{d}_\mathrm{p}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{d}_\mathrm{p}},
+  description={displacement vector of the propellant mass with respect to the \glsentryname{cg} of the total mass of the vehicle}
+}
+
+\newglossaryentry{displacementVector}
+{type=symbols,
+  name= \ensuremath{\mathbf{d}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\mathbf{d}},
+  description={displacement vector of the  \glsentryname{cg} for the new reference point}
+}
+\newglossaryentry{totalInertiaCG}
+{type=symbols,
+  name= \ensuremath{\mathbf{I}_\mathrm{\glsentryname{cg}}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{\mathbf{I}_\mathrm{\glsentryname{cg}}},
+  description={total inertia of the vehicle with respect to its \glsentryname{cg}}
+}
+
+\newglossaryentry{totalInertia}
+{type=symbols,
+  name= \ensuremath{\mathbf{I}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\kilogram\meter\squared}},
+  symbol = \ensuremath{\mathbf{I}},
+  description={total inertia of the vehicle with respect to a vehicle reference point}
+}
+
+\newglossaryentry{vectorDistanceCGToSurface}
+{type=symbols,
+  name= \ensuremath{\boldsymbol{\varsigma}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\glsentryname{vectorDistanceCGToSurface}},
+  description={vector from \glsentryname{cg} to the surface}  
+}
+
+\newglossaryentry{vectorDistanceSurface}
+{type=symbols,
+  name= \ensuremath{\boldsymbol{\varrho}},
+  parent = {rocketParameters},
+  unit = \unexpanded{\si{\meter}},
+  symbol = \ensuremath{\boldsymbol{\varrho}},
+  description={vector from the body reference ponto to the aerodynamic surface}  
+}
+

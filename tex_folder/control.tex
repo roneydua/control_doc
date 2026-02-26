@@ -1,0 +1,25 @@
+
+Controle de um planador. 
+
+As entradas de controle são dois elevons, um direito e outro esquerdo $\leftElevon$ and $\rightElevon$. Para isso, será implementado duas malhas. A condição de equilíbrio é obtida através de um algorítimo de TRIM. No equilíbrio de um planador as condições são:
+\begin{align}
+    \angleAttack &= \eulerTheta - \angleFlightPath, \\
+    \angleSideslip &= 0 \rightarrow \velocityv=0,\\
+    \angularRateVector &= 0,\\
+    \eulerPhi &= 0,\\
+    \eulerPsi &= 0,\\
+\end{align}
+\begin{enumerate}
+\item Malha translacional
+\begin{enumerate}
+\item defino os estados de posição ($\positionVector$) e velocidade ($\velocityVector$) de translação no sistema \gls{ecef}. A saída do simulador compõe os estados atuais, ou seja no instante $k$. 
+\item Os alvos são $\positionVector_{s}$ e $\velocityVector_{s}$. O alvo de velocidade é obtido a partir do número de Mach $\machNumber$, condição de não derrapagem (como $\angleSideslip$ deve ser nulo, a velocidade no corpo lateral deve ser nula $\velocityv=0$). Com $\machNumber$ e ângulo de ataque ($\angleAttack$ obtido por um algorítimo de TRIM) as velocidades no corpo são calculadas. Primeira dúvida, e a referencia de posição? eu integro a velocidade desejada?
+\item A lei de controle considera os erros $\mathbf{e}_p=\positionVector-\positionVector_{s}$ e $\mathbf{e}_v=\velocityVector-\velocityVector_{s}$
+\end{enumerate}
+\item Malha rotacional
+\begin{enumerate}
+    \item d
+\end{enumerate}
+\end{enumerate}
+
+

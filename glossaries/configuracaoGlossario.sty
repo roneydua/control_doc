@@ -1,0 +1,77 @@
+% \usepackage[acronym,symbols,toc, automake=true,translate=babel,nomain, nonumberlistz]{glossaries-extra}
+\usepackage{ifplatform}
+
+\ifwindows
+  % Windows -> automake=false
+  \usepackage[
+    acronym,
+    symbols,
+    toc=false,
+    automake=false,
+    translate=babel,
+    nonumberlist,
+    nomain,
+    % hyperoutside=true,
+    % numberedsection=autolabel,
+    % sanitize={none},
+  ]{glossaries}
+\else
+  % Linux (or macOS, etc.) -> automake=true
+  \usepackage[
+    acronym,
+    symbols,
+    toc=false,
+    % automake=true, deprecated
+    automake=delayed,
+    translate=babel,
+    nonumberlist,
+    nomain
+  ]{glossaries}
+\fi
+\makeglossaries
+\usepackage{glossary-mcols}
+\DeclareRobustCommand{\TransposeSymbol}{\ensuremath{^\intercal}}
+
+
+% adiciona o campo de unidades
+%\usepackage{glossary-mcols}%multi-column styles
+
+\newglossarystyle{supergroup}{%
+  % \setglossarystyle{super3col}%
+  \setglossarystyle{long3colheader}%
+  \renewcommand*{\glossaryheader}{%
+    \bfseries Symbols  & \bfseries Descriptions & \bfseries Units \\\hline}%
+  \setlength{\glsdescwidth}{0.7\textwidth}%
+  \renewcommand*{\glsgroupskip}{}%
+  \renewcommand{\glossentry}[2]{%
+    \tabularnewline
+    \multicolumn{2}{c}{%
+      \bfseries\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}}%
+    }%
+    \tabularnewline
+    & \glossentrydesc{##1}%\glspostdescription
+    \tabularnewline
+  }%
+  \renewcommand{\subglossentry}[3]{%
+    \glssubentryitem{##2}%
+    \glstarget{##2}{\glossentryname{##2}}
+    &
+    \glossentrydesc{##2}\glspostdescription
+    &
+    \glsentryunit{##2}%{##3}%\space\space
+    \tabularnewline
+  }%
+}
+\glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
+
+%\newglossary{estimador}{est}{estl}{Símbolos do estimador}
+\loadglsentries[\acronymtype]{../glossaries/siglas}
+%  \loadglsentries[symbols,estimador]{simbolos}
+\loadglsentries[symbols]{../glossaries/parameters_vehicle}
+\loadglsentries[symbols]{../glossaries/comum}
+\loadglsentries[symbols]{../glossaries/states}
+\loadglsentries[symbols]{../glossaries/coefficients}
+\loadglsentries[symbols]{./../glossaries/naca_coefficients}
+\loadglsentries[symbols]{../glossaries/constants}
+\loadglsentries[symbols]{../glossaries/control}
+% \loadglsentries[symbols]{glossario/parametros, glossario/controle, glossario/

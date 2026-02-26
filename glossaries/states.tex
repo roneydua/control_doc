@@ -1,0 +1,610 @@
+\newglossaryentry{states}
+{type=symbols,
+	name= {States},
+	description={}
+}
+
+\newglossaryentry{timeState}
+{type=symbols,
+	name= \ensuremath{t},
+	parent = {states},
+	unit = \unexpanded{\si{\second}},
+	symbol = \ensuremath{t},
+	description={time}
+}
+
+\newglossaryentry{temperature}
+{type=symbols,
+	name= \ensuremath{T},
+	parent = {states},
+	unit = \unexpanded{\si{\kelvin}},
+	symbol = \ensuremath{T},
+	description={temperature}
+}
+\newglossaryentry{temperatureC}
+{type=symbols,
+	name= \ensuremath{T_{C}},
+	parent = {states},
+	unit = \unexpanded{\si{\celsius}},
+	symbol = \ensuremath{T_{C}},
+	description={temperature}
+}
+
+\newglossaryentry{pressure}
+{type=symbols,
+	name= \ensuremath{p},
+	parent = {states},
+	unit = \unexpanded{\si{\pascal}},
+	symbol = \ensuremath{p},
+	description={pressure}
+}
+
+\newglossaryentry{flightSpeed}
+{type=symbols,
+	name= \ensuremath{V_{T}},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \ensuremath{V_{T}},
+	description={flight speed}
+}
+
+\newglossaryentry{angleAttack}
+{type=symbols,
+	name= \ensuremath{\alpha},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\alpha},
+	description={angle of attack}
+}
+
+\newglossaryentry{angleSideslip}
+{type=symbols,
+	name= \ensuremath{\beta},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\beta},
+	description={angle of sideslip}
+}
+
+\newglossaryentry{angleFlightPath}
+{type=symbols,
+	name= \ensuremath{\gamma},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\gamma},
+	description={flight path angle $(\glsentryname{angleAttack}+\glsentryname{eulerTheta})$}
+}
+
+\newglossaryentry{machAngle}
+{type=symbols,
+	name= \ensuremath{\mu},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\mu},
+	description={Mach angle}
+}
+
+\newglossaryentry{machNumber}
+{type=symbols,
+	name= \ensuremath{M},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \ensuremath{M},
+	description={Mach number $(\nicefrac{\glsentrysymbol{flightSpeed}}{\text{Speed of sound}})$}
+}
+
+\newglossaryentry{lateralForceWind}
+{type=symbols,
+	name= \ensuremath{\mathcal{Y}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{\mathcal{Y}},
+	description={lateral force due to wind}
+}
+
+\newglossaryentry{liftForce}
+{type=symbols,
+	name= \ensuremath{L},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{L},
+	description={lift force}
+}
+
+\newglossaryentry{dragForce}
+{type=symbols,
+	name= \ensuremath{D},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{D},
+	description={drag force}
+}
+
+\newglossaryentry{momentAerodynamic}
+{type=symbols,
+	name= \ensuremath{M},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{M},
+	description={aerodynamic moment}
+}
+
+\newglossaryentry{density}
+{type=symbols,
+	name= \ensuremath{\rho},
+	parent = {states},
+	unit = \unexpanded{\si{\kilogram\per\meter\cubed}},
+	symbol = \ensuremath{\rho},
+	description={density of air}
+}
+
+\newglossaryentry{velocity}
+{type=symbols,
+	name= \ensuremath{V},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \ensuremath{V},
+	description={velocity}
+}
+
+\newglossaryentry{positionVector}
+{type=symbols,
+	name= \ensuremath{\mathbf{p}},
+	parent = {states},
+	unit = \unexpanded{\si{\meter}},
+	symbol = \ensuremath{\mathbf{p}},
+	description={position vector}
+}
+
+\newglossaryentry{velocityVector}
+{type=symbols,
+	name= \ensuremath{\mathbf{v}},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \ensuremath{\mathbf{v}},
+	description={velocity vector ($\dot{\glsentryname{positionVector}}$)}
+}
+\newglossaryentry{accelerationVector}
+{type=symbols,
+	name= \ensuremath{\mathbf{a}},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second\squared}},
+	symbol = \ensuremath{\mathbf{a}},
+	description={acceleration vector ($\ddot{\glsentryname{positionVector}}$)}
+}
+
+
+\newglossaryentry{velocityu}
+{type=symbols,
+	name= \ensuremath{u},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \ensuremath{u},
+	description={velocity componetent on \glsentrysymbol{bodyAxisx}}
+}
+
+\newglossaryentry{velocityv}
+{type=symbols,
+	name= \ensuremath{v},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \ensuremath{v},
+	description={velocity componetent on \glsentrysymbol{bodyAxisy}}
+}
+
+\newglossaryentry{velocityw}
+{type=symbols,
+	name= \ensuremath{w},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \ensuremath{w},
+	description={velocity componetent on \glsentrysymbol{bodyAxisz}}
+}
+
+\newglossaryentry{angularRatep}
+{type=symbols,
+	name= \ensuremath{p},
+	parent = {states},
+	unit = \unexpanded{\si{\radian\per\second}},
+	symbol = \ensuremath{p},
+	description={velocity componetent on \glsentrysymbol{bodyAxisx} (roll rate of change)}
+}
+
+\newglossaryentry{angularRateq}
+{type=symbols,
+	name= \ensuremath{q},
+	parent = {states},
+	unit = \unexpanded{\si{\radian\per\second}},
+	symbol = \ensuremath{q},
+	description={velocity componetent on \glsentrysymbol{bodyAxisy} (pitch rate of change)}
+}
+
+\newglossaryentry{angularRater}
+{type=symbols,
+	name= \ensuremath{r},
+	parent = {states},
+	unit = \unexpanded{\si{\radian\per\second}},
+	symbol = \ensuremath{r},
+	description={velocity componetent on \glsentrysymbol{bodyAxisz} (yaw rate of change)}
+}
+
+\newglossaryentry{soundSpeed}
+{type=symbols,
+	name= \ensuremath{a},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second}},
+	symbol = \glsentryname{soundSpeed},
+	description={sound speed}
+}
+
+% force on body axes
+\newglossaryentry{bodyForceX}
+{type=symbols,
+	name= \ensuremath{X},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{X},
+	description={force on \glsentrysymbol{bodyAxisx}}
+}
+
+\newglossaryentry{bodyForceY}
+{type=symbols,
+	name= \ensuremath{Y},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{Y},
+	description={lateral force on \glsentrysymbol{bodyAxisy}}
+}
+
+
+
+\newglossaryentry{bodyForceZ}
+{type=symbols,
+	name= \ensuremath{Z},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{Z},
+	description={force on \glsentrysymbol{bodyAxisz}}
+}
+
+\newglossaryentry{bodyForceAxial}
+{type=symbols,
+	name= \ensuremath{A},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{A},
+	description={axial force on \glsentrysymbol{bodyAxis}. Equivalent to -\glsentrysymbol{bodyForceX}}
+}
+\newglossaryentry{bodyForceNormal}
+{type=symbols,
+	name= \ensuremath{N},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{N},
+	description={normal force on \glsentrysymbol{bodyAxis}. Equivalent to -\glsentrysymbol{bodyForceZ}}
+}
+
+
+
+\newglossaryentry{momentRoll}
+{type=symbols,
+	name= \ensuremath{l},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{l},
+	description={roll moment}
+}
+
+\newglossaryentry{momentPitch}
+{type=symbols,
+	name= \ensuremath{m},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{m},
+	description={pitch moment}
+}
+
+\newglossaryentry{momentYaw}
+{type=symbols,
+	name= \ensuremath{n},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{n},
+	description={yaw moment}
+}
+
+\newglossaryentry{Elevon}
+{type=symbols,
+	name= \ensuremath{\delta_{e}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\delta_{e}},
+	description={symmetric elevon angle}
+}
+
+\newglossaryentry{rightElevon}
+{type=symbols,
+	name= \ensuremath{\delta_{e_{r}}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\delta_{e_{r}}},
+	description={right elevon angle}
+}
+
+
+\newglossaryentry{leftElevon}
+{type=symbols,
+	name= \ensuremath{\delta_{e_{l}}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\delta_{e_{l}}},
+	description={left elevon angle}
+}
+
+
+\newglossaryentry{rudder}
+{type=symbols,
+	name= \ensuremath{\delta_{r}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\delta_{r}},
+	description={rudder deflection angle}
+}
+
+% forces and moments
+\newglossaryentry{forceVector}
+{type=symbols,
+	name= \ensuremath{\mathbf{f}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \glsentryname{forceVector},
+	description={force vector}
+}
+
+\newglossaryentry{forceVectorPropulsion}
+{type=symbols,
+	name= \ensuremath{{\glsentryname{forceVector}}_{p}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{{\glsentryname{forceVector}}_{p}},
+	description={propulsion force vector}
+}
+
+\newglossaryentry{specificImpulse}
+{type=symbols,
+	name= \ensuremath{I_\textrm{sp}},
+	parent = {states},
+	unit = \unexpanded{\si{\second}},
+	symbol = \ensuremath{I_\textrm{sp}},
+	description={specific impulse}
+}
+
+
+\newglossaryentry{forcePropulsion}
+{type=symbols,
+	name= \ensuremath{f_{p}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{\glsentryname{forcePropulsion}},
+	description={propulsion force}
+}
+
+
+\newglossaryentry{forceVectorAerodynamic}
+{type=symbols,
+	name= \ensuremath{{\glsentryname{forceVector}}_{a}},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \ensuremath{{\glsentryname{forceVector}}_{a}},
+	description={aerodynamic force vector}
+}
+
+\newglossaryentry{forceXbody}
+{type=symbols,
+	name= \ensuremath{f_{x}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{f_{x}},
+	description={force on \glsentrysymbol{bodyAxisx}}
+}
+
+\newglossaryentry{forceYbody}
+{type=symbols,
+	name= \ensuremath{f_{y}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{f_{y}},
+	description={force on \glsentrysymbol{bodyAxisy}}
+}
+
+\newglossaryentry{forceZbody}
+{type=symbols,
+	name= \ensuremath{f_{z}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton}},
+	symbol = \ensuremath{f_{z}},
+	description={force on \glsentrysymbol{bodyAxisz}}
+}
+
+
+\newglossaryentry{momentVector}
+{type=symbols,
+	name= \ensuremath{\mathbf{m}},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \glsentryname{momentVector},
+	description={moment vector}
+}
+
+\newglossaryentry{momentXbody}
+{type=symbols,
+	name= \ensuremath{m_{x}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{m_{x}},
+	description={moment on \glsentrysymbol{bodyAxisx}}
+}
+
+\newglossaryentry{momentYbody}
+{type=symbols,
+	name= \ensuremath{m_{y}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{m_{y}},
+	description={moment on \glsentrysymbol{bodyAxisy}}
+}
+
+\newglossaryentry{momentZbody}
+{type=symbols,
+	name= \ensuremath{m_{z}},
+	parent = {states},
+	unit = \unexpanded{\si{\newton\meter}},
+	symbol = \ensuremath{m_{z}},
+	description={moment on \glsentrysymbol{bodyAxisz}}
+}
+
+\newglossaryentry{gravityVector}
+{type=symbols,
+	name= \ensuremath{\mathbf{g}},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \ensuremath{\mathbf{g}},
+	description={gravitational force vector}
+}
+
+\newglossaryentry{gravitationalAccelerationNavigationSystem}
+{type=symbols,
+	name= \ensuremath{g},
+	parent = {states},
+	unit = \unexpanded{\si{\meter\per\second\squared}},
+	symbol = \ensuremath{g},
+	description={gravitational acceleration}
+}
+
+\newglossaryentry{angularRateVector}
+{type=symbols,
+	name= \ensuremath{\boldsymbol{\omega}_{BC}^{A}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian\per\second}},
+	symbol = \ensuremath{\boldsymbol{\omega}},
+	description={earth angular rate vector of frame C with respect to frame B expressed in frame A}
+}
+
+\newglossaryentry{angleBetweenFramesEcefInertial}
+{type=symbols,
+	name= \ensuremath{\theta_{\glsentryname{inertialSystem}\glsentryname{ecefSystem}}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian\per\second}},
+	symbol = \ensuremath{\theta_{\glsentryname{inertialSystem}\glsentryname{ecefSystem}}},
+	description={rotation angle between \glsentryname{ecefSystem} and \glsentryname{inertialSystem}}
+}
+% coordinates of local system
+\newglossaryentry{geodeticLatitude}
+{type=symbols,
+	name= \ensuremath{\phi},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\phi},
+	description={geodetic latitude}
+}
+
+\newglossaryentry{geodeticLongitude}
+{type=symbols,
+	name= \ensuremath{\lambda},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\lambda},
+	description={geodetic longitude}
+}
+
+\newglossaryentry{ellipsoidalHeight}
+{type=symbols,
+	name= \ensuremath{h},
+	parent = {states},
+	unit = \unexpanded{\si{\meter}},
+	symbol = \ensuremath{h},
+	description={ellipsoidal height}
+}
+
+
+\newglossaryentry{quaternion}
+{type=symbols,
+	name= \ensuremath{\mathbf{q}},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \ensuremath{\mathbf{q}},
+	description={unit quatertion of attitude}
+}
+
+\newglossaryentry{qv}
+{type=symbols,
+	name= \ensuremath{\glsentrysymbol{q}_v},
+	parent = {states},
+	unit = {},
+	symbol = \ensuremath{\mathbf{q}_v},
+	description={ vetorial part of quaternion \glsentrysymbol{q}}
+}
+
+\newglossaryentry{centerOfPressure}
+{type=symbols,
+	name= \ensuremath{\mathbf{c}_p},
+	parent = {states},
+	unit = \unexpanded{\si{\meter}},
+	symbol = \ensuremath{\mathbf{c}_p},
+	description={center of pressure}
+}
+
+\newglossaryentry{eulerAngleVector}
+{type=symbols,
+	name= \ensuremath{\boldsymbol{\varPhi}},
+	parent = {states},
+	unit = \unexpanded{\si{\radian\per\second}},
+	symbol = \ensuremath{\boldsymbol{\varPhi}},
+	description={Euler angles vector}
+}
+
+\newglossaryentry{eulerPhi}
+{type=symbols,
+	name= \ensuremath{\phi},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\phi},
+	description={roll angle}
+}
+
+\newglossaryentry{eulerTheta}
+{type=symbols,
+	name= \ensuremath{\theta},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\theta},
+	description={pitch angle}
+}
+
+\newglossaryentry{eulerPsi}
+{type=symbols,
+	name= \ensuremath{\psi},
+	parent = {states},
+	unit = \unexpanded{\si{\radian}},
+	symbol = \ensuremath{\psi},
+	description={yaw angle}
+}
+
+\newglossaryentry{stateVector}
+{type=symbols,
+	name= \ensuremath{\boldsymbol{\chi}},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \ensuremath{\boldsymbol{\chi}},
+	description={state vector}
+}
+
+\newglossaryentry{controlVector}
+{type=symbols,
+	name= \ensuremath{\boldsymbol{u}},
+	parent = {states},
+	unit = \unexpanded{},
+	symbol = \ensuremath{\boldsymbol{u}},
+	description={control vector}
+}
+

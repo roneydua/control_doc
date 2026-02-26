@@ -1,0 +1,38 @@
+﻿\begin{tikzpicture}
+    \newcommand{\drawtaperedwing}[7]{
+        % #1 = sweep_angle         % #2 = trailing_edge_angle         % #3 = root_chord         % #4 = wing_span
+        % #5 = line color         % #6 = mach line angle        %#7 = taper_ratio % draw system of coordinates
+        \draw[thick, ->] (0, 0) -- ({#3+1}, 0) node[right] {$x$};
+        \draw[thick, ->] (0, 0) -- (0, {#3*.5}) node[right] {$y$};
+        % draw wing
+        \coordinate (A) at (0, 0);
+        \coordinate (B) at ({0.5* #4 *tan(#1)},{ 0.5*#4}); 
+        \coordinate (C) at ({ #3+0.5*#4/ tan(#2)}, {#4 * 0.5});
+        \coordinate (D) at ({#3}, 0);
+
+        \coordinate (E) at (0, 1);
+        \coordinate (F) at ({#3+1}, 0);
+
+        % draw angles
+        \draw[thick,draw={#5}] (A) -- (B) -- (C) -- (D) -- cycle;
+        \pic [draw, <-,angle radius=.5cm, angle eccentricity=.5, {#5}] {angle = B--A--E};
+        \node at ([shift={(.25,0.75)}] A) {$\Lambda$};
+        \pic [draw, ->,angle radius=.5cm, angle eccentricity=.5, {#5}] {angle = F--D--C};
+        \node at ([shift={(.75,0.25)}] D) {$\delta$};
+
+        % draw mach line
+        \coordinate (G) at ({0.2*#4/tan(#6)}, {0.2*#4});
+        \draw[dashed,draw=red] (0, 0) -- (G) ;
+        \pic [draw, ->,angle radius=.75cm, angle eccentricity=.5, {#5}] {angle = F--A--G};
+        \node at ([shift={(.85,0.25)}] A) {$\mu$};
+
+        \coordinate (H) at ($(B)+({0.1/tan(#6)}, -{0.1})$);
+        \draw[dashed,draw=red] (B) -- (H) ;
+        \coordinate (I) at ($(D)+({.1/tan(#6)}, {.1})$);
+        \draw[dashed,draw=red] (D) -- (I) ;
+        % \pic [draw, angle radius=.75cm, angle eccentricity=.5, {#5}] {angle = F--A--G};
+
+    }   
+    \drawtaperedwing{71.40100852936138}{89.9}{3.24}{1.26}{blue}{7}{0.44}
+
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+[submodule "glossaries"]
+	path = glossaries
+	url = https://github.com/EAH-C/glossaries.git
+[submodule "python/atmosphere1976"]
+	path = python/atmosphere1976
+	url = https://github.com/EAH-C/atmosphere1976.git

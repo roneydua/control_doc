@@ -1,0 +1,79 @@
+\newglossaryentry{nacaCoefficients}
+{type=symbols,
+  name= {\glsentryname{naca}'s coefficients},
+  description={}
+}
+
+\newglossaryentry{cotangentMachAngle}
+{type=symbols,
+  name= \ensuremath{B},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{B},
+  description={cotangent of Mach angle $\cot{\machAngle} = (\sqrt{\glsentrysymbol{machNumber}^2-1})$}
+}
+
+\newglossaryentry{BCotTrailingEdge}
+{type=symbols,
+  name= \ensuremath{g},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{g},
+  description={\glsentrysymbol{cotangentMachAngle} cotg of trailing-edge sweep angle from y-axis ($\glsentrysymbol{cotangentMachAngle}\tan{\glsentrysymbol{angleBetweenTrailingEdgeAndAxisSymmetry}} = \frac{\mNaca}{\n}$) }
+}
+
+\newglossaryentry{completeEllipticIntegralFirstKind}
+{type=symbols,
+  name= \ensuremath{K^{\prime}},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{K^{\prime}},
+  description={complete elliptic integral of the first kind with modulus $k$}
+}
+
+\newglossaryentry{completeEllipticIntegralSecondKind}
+{type=symbols,
+  name= \ensuremath{E^{\prime}},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{E^{\prime}},
+  description={complete elliptic integral of the second kind with modulus $k$}
+}
+
+\newglossaryentry{parameterI}
+{type=symbols,
+  name = \ensuremath{I},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{I},
+  description = {\ensuremath{I(m)=\frac{2(1-m^2)}{(2-m^2) \glsentryname{completeEllipticIntegralSecondKind}(m) - m^{2} \glsentryname{completeEllipticIntegralFirstKind}(m)}}}
+}
+
+\newglossaryentry{mNaca}
+{type=symbols,
+  name= \ensuremath{m},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{m},
+  description={$\glsentrysymbol=\frac{\tan{\angleBetweenLeadingEdgeAndAxisSymmetry}}{\tan{\machAngle}} = \cotangentMachAngle \cot{\angleLeadingEdgeSweep}$}
+}
+
+\newglossaryentry{geometricParameterOfWing}
+{type=symbols,
+  name= \ensuremath{\omega},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{\omega},
+  description={geometric parameter of wing $\glsentrysymbol=\frac{4\mNaca}{\aspectRation \cotangentMachAngle (1+\taperRatio)}$}
+}
+
+
+\newglossaryentry{n}
+{type=symbols,
+  name= \ensuremath{n},
+  parent = {nacaCoefficients},
+  unit = \unexpanded{},
+  symbol = \ensuremath{n},
+  description={$\frac{\tan{\angleBetweenLeadingEdgeAndAxisSymmetry}}{\tan{\angleBetweenTrailingEdgeAndAxisSymmetry}} = 1 - (1-\taperRatio)\geometricParameterOfWing$}
+}
+

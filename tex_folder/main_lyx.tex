@@ -1,0 +1,50 @@
+%% LyX 2.4.0 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,brazil,english,american]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=1cm,headsep=1cm,footskip=1cm}
+\usepackage[active]{srcltx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\RequirePackage{../tex_folder/preambleLyx}
+%\pdfpkresolution=300    % dpi       % see pdftex manual
+% Added by lyx2lyx
+
+\makeatother
+
+\usepackage{babel}
+\usepackage{biblatex}
+\addbibresource{bibliografia.bib}
+\begin{document}
+\input{../glossaries/mathSymbolsLyx.tex}
+
+\input{../glossaries/operators.tex}
+
+\input{capa_ieav.tex}
+
+\input{control.tex}
+
+\begin{refcontext}[sorting=nyt]
+
+{\footnotesize\printbibliography[heading=bibintoc]
+}{\footnotesize\par}
+
+\end{refcontext}
+\end{document}

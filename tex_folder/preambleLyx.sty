@@ -1,0 +1,119 @@
+\RequirePackage{../colorSetup}
+\usepackage{pdflscape} % For PDF documents
+\usepackage{physics}
+% \usepackage{mathptmx}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+\usetikzlibrary{angles} % Load the angles library
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, decorations.pathmorphing}
+
+\usepackage{amssymb}
+% To add tables with "formal style"
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+% % Packages of font family
+% % \usepackage{fourier}
+\usepackage{mathpazo}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{wasysym}
+
+\usepackage{siunitx}[=v2]
+\usepackage{nicefrac}
+
+\usepackage[bookmarks=true,
+    breaklinks=true,
+    backref=false,
+    draft=false,
+    allcolors = mycolor2,
+    colorlinks=true]
+{hyperref}
+
+
+\usepackage[T1]{fontenc}
+
+
+
+\renewcommand{\familydefault}{\rmdefault}
+
+% \DeclareMathSizes{12}{12}{6}{6}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+% \usepackage{showframe}
+% % \usepackage{pdfpages}
+
+\sisetup{
+    % scientific-notation = true,
+    % input-decimal-markers={,},
+    % output-decimal-marker = {,},
+    % uncertainty-mode = separate,
+    space-before-unit=true,
+    round-mode=places,
+    round-precision=2,
+    output-complex-root = \ensuremath{\imath},
+    complex-root-position = before-number
+}
+
+\DeclareSIUnit\decibelm{dBm}
+% sugestion of package siunitx for works with physics
+% \AtBeginDocument{\RenewCommandCopy\qty\SI}
+\providecommand{\unit}[1]{\ensuremath{\mathrm{#1}}}
+\let\unitvelho\unit
+\renewcommand\unit[1]{\,\unitvelho{#1}}
+\let\sivelho\si
+\renewcommand\si[1]{\,\sivelho{#1}}
+% %define o proximo ao ABNT
+\usepackage[style=abnt, % Usa o estilo de citacao e bibliografia ABNT
+    maxnames=1, % Limita a exibicao de autores citados no texto a 1 (seguido de "et al.")
+    maxbibnames=1, % Limita a exibicao de autores na bibliografia a 4 (seguido de "et al.")
+    citetracker=true, % Permite rastrear as citacoes para funcionalidades como backref
+    maxcitenames=1, % Similar a maxnames, limita o numero de autores em citacoes no texto
+    giveninits=true, % Exibe apenas as iniciais dos prenomes dos autores
+    sortcites=true, % Ordena multiplas citacoes dentro dos parenteses
+    sorting=ynt, % Define a ordem de classificacao da bibliografia como ano, nome, titulo
+    backend=biber, % Utiliza o Biber como mecanismo de processamento bibliografico
+    natbib=true, % Permite o uso de comandos de citacao do pacote natbib
+    url=false, % Nao exibe URLs na bibliografia
+    % doi=only, Exibiria apenas o DOI, omitindo outras informacoes de URL
+    eprint=false, % Nao exibe informacoes de eprint (como arXiv)
+    uniquename=mininit, % Desambigua nomes de autores com iniciais, se necessario
+    uniquelist=minyear, % Desambigua listas de autores identicas apenas se o ano tambem for o mesmo apos a truncagem
+    backref=true, % Adiciona links nas referencias para as paginas onde foram citadas
+    bibstyle=abnt-numeric]{biblatex} % Usa o estilo numerico da ABNT para a bibliografia
+
+% \addbibresource{./bibliografia.bib}
+% remoção de campos indesejados
+\AtEveryBibitem{%
+    \clearfield{issn} % Remove issn
+    \clearfield{doi} % Remove doi
+    \clearfield{eprint} % Remove eprint
+
+    % \ifentrytype{online}{}{% Remove url except for @online
+    %     \clearfield{url}
+    % }
+}
+
+
+\usepackage{varioref}[2001/09/04]% ← To use the vref option
+% \usepackage[capitalize,brazilian,nameinlink]{cleveref}
+\usepackage[nameinlink]{cleveref}
+
+\RequirePackage{../glossaries/configuracaoGlossario}
+
+\usepackage{todonotes}
+\newcommand{\todoError}[2][]{\todo[color=red!70, #1, size=\tiny]{#2}}
+\newcommand{\todoWarn}[2][]{\todo[color=orange, #1, size=\tiny]{#2}}
+\newcommand{\todoRemark}[2][]{\todo[color=yellow!80!black, #1, size=\tiny]{#2}}
+\newcommand{\todoEnsure}[2][]{\todo[color=green!20, #1, size=\tiny]{#2}}
+\newcommand{\todoDone}[2][]{\todo[color=blue!50, #1, size=\tiny]{#2}}
+
+% Macro to include pstricks files and disable temporally hyperref
+\newcommand{\imagespath}{./../images}
+\newcommand{\authors}{Roney D da Silva}
+\newcommand{\reportTitle}{Linear analysis of six DOF model}
+\newcommand{\reviewers}{Nei Cardenuto e Christian Danner}
+\newcommand{\approvers}{Brunno Campos Martins}

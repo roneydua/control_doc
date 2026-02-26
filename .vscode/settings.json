@@ -1,0 +1,8 @@
+{
+    "latex-workshop.latex.outDir": "./aux_folder/",
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "latex-workshop.latex.outDir": "aux_folder/",
+}

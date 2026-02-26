@@ -1,0 +1,37 @@
+\documentclass[12pt,american]{extarticle}
+\usepackage[american, brazil]{babel}
+\RequirePackage{preamble}
+\onehalfspacing
+\makeatletter
+\RequirePackage{colorSetup}
+\addbibresource{bibliografia.bib}
+\makeatother
+
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{remark}
+\newtheorem{note}[thm]{\protect\notename}
+\addto\captionsamerican{\renewcommand{\notename}{Note}}
+\addto\captionsamerican{\renewcommand{\theoremname}{Theorem}}
+\addto\captionsbrazil{\renewcommand{\notename}{Nota}}
+\addto\captionsbrazil{\renewcommand{\theoremname}{Teorema}}
+\providecommand{\notename}{Nota}
+\providecommand{\theoremname}{Teorema}
+
+\begin{document}
+\input{../glossaries/mathSymbols.tex}
+% \input{../glossaries/mathSymbolsQtikz.tex}
+\input{../glossaries/operators.tex}
+
+\input{capa_ieav.tex}
+\input{pre_text.tex}
+% 
+\input{control.tex}
+
+\begin{refcontext}[sorting=nyt]
+
+	{\footnotesize\printbibliography[heading=bibintoc]
+	}{\footnotesize\par}
+
+\end{refcontext}
+\end{document}
